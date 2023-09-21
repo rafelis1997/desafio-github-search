@@ -19,11 +19,14 @@
     <EditText
         android:id="@+id/et_nome_usuario"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="64dp"
+        android:paddingVertical="16dp"
         android:layout_margin="16dp"
         android:ems="10"
         android:hint="@string/nome_usuario"
         android:inputType="text"
+        style="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_titulo" />
@@ -32,11 +35,24 @@
         android:id="@+id/btn_confirmar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:paddingVertical="16dp"
         android:layout_marginTop="4dp"
+        style="@style/TextAppearance.MaterialComponents.Headline6"
+        android:textColor="@color/white"
+        android:textStyle="normal"
         android:text="@string/confirmar"
         app:layout_constraintEnd_toEndOf="@id/et_nome_usuario"
         app:layout_constraintStart_toStartOf="@id/et_nome_usuario"
         app:layout_constraintTop_toBottomOf="@id/et_nome_usuario" />
+
+    <TextView
+        android:id="@+id/tv_results"
+        style="@style/TextAppearance.MaterialComponents.Body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/results"
+        app:layout_constraintStart_toStartOf="@id/btn_confirmar"
+        app:layout_constraintTop_toBottomOf="@id/btn_confirmar" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_lista_repositories"
@@ -46,7 +62,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_confirmar"
+        app:layout_constraintTop_toBottomOf="@id/tv_results"
         tools:listitem="@layout/repository_item" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
